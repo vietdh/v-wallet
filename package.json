@@ -1,6 +1,6 @@
 {
   "name": "v-wallet",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "cosmos wallet generator",
   "main": "index.js",
   "homepage": "https://github.com/vietdh/v-wallet",
@@ -14,7 +14,8 @@
   "keywords": [
     "Wallet",
     "v-wallet",
-    "cosmos"
+    "cosmos",
+	"blockchain"
   ],
   "author": "vietdh",
   "license": "MTL",

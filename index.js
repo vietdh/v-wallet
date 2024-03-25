@@ -1,5 +1,11 @@
 const Cosmos = require("@cosmostation/cosmosjs");
 
+const chainId = 'cosmoshub-3'; // Replace with the appropriate chain ID
+const mnemonic = 'your-mnemonic-here'; // Replace with your mnemonic
+const senderAddress = 'your-sender-address'; // Replace with your sender address
+const recipientAddress = 'recipient-address'; // Replace with the recipient address
+const amount = '1000uatom'; // Amount to send (in this example, 1000 uatom)
+
 async function generateCosmosWallet() {
     // Initialize Cosmos object
     const chainId = "cosmoshub-4"; // Replace with your desired chain ID
@@ -13,13 +19,7 @@ async function generateCosmosWallet() {
     return { address, mnemonic };
 }
 
-const chainId = 'cosmoshub-3'; // Replace with the appropriate chain ID
-const mnemonic = 'your-mnemonic-here'; // Replace with your mnemonic
-const senderAddress = 'your-sender-address'; // Replace with your sender address
-const recipientAddress = 'recipient-address'; // Replace with the recipient address
-const amount = '1000uatom'; // Amount to send (in this example, 1000 uatom)
-
-async function sendTransaction() {
+async function sendTransactionCosmos() {
     const cosmos = new Cosmos('https://lcd.testnet.cosmos.network', chainId);
     
     // Load the sender wallet
@@ -127,6 +127,20 @@ async function decodeTransaction() {
     const decodedTx = cosmos.decodeTx(encodedTx);
 
     console.log('Decoded transaction:', decodedTx);
+}
+
+async function getBalance() {
+  try {
+    // Query the account information from the blockchain
+    const account = await cosmos.getAccounts(address);
+
+    // Extract the balance from the account information
+    const balance = account.result.value.coins;
+
+    console.log("Balance:", balance);
+  } catch (error) {
+    console.error("Error fetching balance:", error);
+  }
 }
 
 // Execute the function
