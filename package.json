@@ -1,6 +1,6 @@
 {
   "name": "v-wallet",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "cosmos wallet generator",
   "main": "index.js",
   "homepage": "https://github.com/vietdh/v-wallet",
@@ -32,30 +32,5 @@
     "ripemd160": "^2.0.1",
     "secp256k1": "^3.2.5",
     "sha256": "^0.2.0"
-  },
-  "devDependencies": {
-	"@cosmostation/cosmosjs": "^0.11.2",
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/register": "^7.5.5",
-    "@babel/runtime-corejs3": "^7.4.0",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "coveralls": "^3.0.5",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-friendly-formatter": "^4.0.1",
-    "eslint-import-resolver-webpack": "^0.10.1",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1"
   }
 }
